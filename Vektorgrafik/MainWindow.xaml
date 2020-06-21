@@ -1,0 +1,60 @@
+﻿<Window x:Class="Vektorgrafik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Vektorgrafik"
+        mc:Ignorable="d"
+        Title="Vektorgrafik Zeichenprogramm" WindowState="Maximized" Loaded="Window_Loaded" Closing="Window_Closing" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="715*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.ColumnSpan="2">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Datei">
+                    <MenuItem Header="Neu" Click="Menu_neu_click"></MenuItem>
+                    <MenuItem Header="Öffnen" Click="Menu_offnen_click"></MenuItem>
+                    <Separator></Separator>
+
+                    <MenuItem Header="Speichern" Click="Menu_save_click"></MenuItem>
+                    <MenuItem Header="Speichern unter" Click="Menu_saveunter_click"></MenuItem>
+                    <MenuItem Header="Drucken" Click="Menu_drucken_click"></MenuItem>
+
+                    <Separator></Separator>
+                    <MenuItem Header="Shortcuts" Click="shortcuts_view"></MenuItem>
+                    <MenuItem Header="Exit" Click="Menu_exit_click"></MenuItem>
+                </MenuItem>
+            </Menu>
+            <GroupBox Header="Modus" DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal">
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,12,0" Name="Bearbeiten">
+                        <Image Source="Grafics/Bearbeiten.png" ></Image>
+                    </ToggleButton>
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,4,0" Name="Linie">
+                        <Image Source="Grafics/Linie.png" ></Image>
+                    </ToggleButton>
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,4,0" Name="Dreieck">
+                        <Image Source="Grafics/Dreieck.png" ></Image>
+                    </ToggleButton>
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,4,0" Name="Ellipse">
+                        <Image Source="Grafics/Ellipse.png" ></Image>
+                    </ToggleButton>
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,4,0" Name="Kreis">
+                        <Image Source="Grafics/Kreis.png" ></Image>
+                    </ToggleButton>
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,4,0" Name="Rechteck">
+                        <Image Source="Grafics/Rechteck.png" ></Image>
+                    </ToggleButton>
+                    <ToggleButton Height="24" Width="24" Click="Click_box" Margin="0,0,4,0" Name="Quadrat">
+                        <Image Source="Grafics/Quadrat.png" ></Image>
+                    </ToggleButton>
+                </StackPanel>
+            </GroupBox>
+            <Canvas Name="CanvasZeichnung" MouseLeftButtonDown="CanvasZeichnung_MouseLeftButtonDown" DockPanel.Dock="Bottom" Background="White" MouseMove="CanvasZeichnung_MouseMove" MouseRightButtonDown="CanvasZeichnung_MouseRightButtonDown"/>
+        </DockPanel>
+
+
+    </Grid>
+</Window>
