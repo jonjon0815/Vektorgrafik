@@ -13,18 +13,18 @@
         </Grid.ColumnDefinitions>
         <DockPanel Grid.ColumnSpan="2">
             <Menu DockPanel.Dock="Top">
-                <MenuItem Header="Datei">
-                    <MenuItem Header="Neu" Click="Menu_neu_click"></MenuItem>
-                    <MenuItem Header="Öffnen" Click="Menu_offnen_click"></MenuItem>
+                <MenuItem Header="_Datei">
+                    <MenuItem Header="_Neu" Click="Menu_neu_click"></MenuItem>
+                    <MenuItem Header="_Öffnen" Click="Menu_offnen_click"></MenuItem>
                     <Separator></Separator>
 
-                    <MenuItem Header="Speichern" Click="Menu_save_click"></MenuItem>
-                    <MenuItem Header="Speichern unter" Click="Menu_saveunter_click"></MenuItem>
-                    <MenuItem Header="Drucken" Click="Menu_drucken_click"></MenuItem>
+                    <MenuItem Header="_Speichern" Click="Menu_save_click"></MenuItem>
+                    <MenuItem Header="_Speichern unter" Click="Menu_saveunter_click"></MenuItem>
+                    <MenuItem Header="_Drucken" Click="Menu_drucken_click"></MenuItem>
 
                     <Separator></Separator>
-                    <MenuItem Header="Shortcuts" Click="shortcuts_view"></MenuItem>
-                    <MenuItem Header="Exit" Click="Menu_exit_click"></MenuItem>
+                    <MenuItem Header="_Shortcuts" Click="shortcuts_view"></MenuItem>
+                    <MenuItem Header="_Exit" Click="Menu_exit_click"></MenuItem>
                 </MenuItem>
             </Menu>
             <GroupBox Header="Modus" DockPanel.Dock="Top">
